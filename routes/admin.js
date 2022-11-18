@@ -9,8 +9,8 @@ var productHelper = require("../helpers/product-helpers");
 /* GET users listing. */
 
 const cridential = {
-  name: process.env.UESER_NAME,
-  password: process.env.PASSWORD,
+  name: "nediyath",
+  password: "nediyath@gmail.com",
 };
 
 const verifylogin = (req, res, next) => {
