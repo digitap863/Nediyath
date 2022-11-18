@@ -1,0 +1,150 @@
+<div id="side-panel" class="side-panel">
+  <a href="#" class="side-panel-close"><i class="ot-flaticon-close-1"></i></a>
+  <div class="side-panel-block">
+    <div class="side-panel-wrap">
+      <div class="the-logo">
+        <a href="index-html">
+          <img src="images/logo-footer.svg" alt="Theratio" />
+        </a>
+      </div>
+      <div class="ot-heading">
+        <h2 class="main-heading">Contact Info</h2>
+      </div>
+      <div class="side-panel-cinfo">
+        <ul class="panel-cinfo">
+          <li class="panel-list-item">
+            <span class="panel-list-icon"><i
+                class="ot-flaticon-place"
+              ></i></span>
+            <span class="panel-list-text">Hill Place Road, Market Junction,
+              Tripunithara-682301</span>
+          </li>
+          <li class="panel-list-item">
+            <span class="panel-list-icon"><i
+                class="ot-flaticon-mail"
+              ></i></span>
+            <span class="panel-list-text">nediyathsanitary3@gmail.com</span>
+          </li>
+          <li class="panel-list-item">
+            <span class="panel-list-icon"><i
+                class="ot-flaticon-phone-call"
+              ></i></span>
+            <span class="panel-list-text">0484 2776464</span>
+          </li>
+        </ul>
+      </div>
+      <div class="side-panel-social">
+        <ul>
+          <li><a href="http://twitter.com" target="_self"><i
+                class="fab fa-twitter"
+              ></i></a></li>
+          <li><a href="http://facebook.com" target="_self"><i
+                class="fab fa-facebook-f"
+              ></i></a></li>
+          <li><a href="http://linkedin.com" target="_self"><i
+                class="fab fa-linkedin-in"
+              ></i></a></li>
+          <li><a href="http://instagram" target="_self"><i
+                class="fab fa-instagram"
+              ></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="content" class="site-content">
+  <div
+    class="page-header dtable text-center header-transparent pheader-portfolio"
+  >
+    <div class="dcell">
+      <div class="container">
+        <h1 class="page-title">Portfolio Grid Masonry</h1>
+        <ul id="breadcrumbs" class="breadcrumbs none-style">
+          <li><a href="/">Home</a></li>
+          <li class="active">Gallery</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="our-portfolio">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center theratio-align-center">
+        <div class="ot-heading is-dots">
+          <span>[ our portfolio ]</span>
+          <h2 class="main-heading">Some of Our Works<br />
+            and Case Studies for Clients</h2>
+        </div>
+        <div class="space-40"></div>
+        <div class="project-filter-wrapper">
+          <ul class="project_filters">
+            <li><a
+                href="#"
+                data-filter="*"
+                class="selected btn-details"
+              >All<span class="filter-count"></span></a></li>
+            <li><a
+                class="btn-details"
+                href="#"
+                data-filter=".FaucetsShowers"
+              >Faucets&Showers<span class="filter-count"></span></a></li>
+            <li><a
+                class="btn-details"
+                href="#"
+                data-filter=".Sanitaryware"
+              >Sanitaryware<span class="filter-count"></span></a></li>
+            <li><a
+                class="btn-details"
+                href="#"
+                data-filter=".Closet"
+              >Closet<span class="filter-count"></span></a></li>
+            <li><a class="btn-details" href="#" data-filter=".WaterTanks">Water
+                Tanks<span class="filter-count"></span></a></li>
+            <li><a class="btn-details" href="#" data-filter=".WaterTanks">
+                Kitchen Items&Stores<span class="filter-count"></span></a></li>
+            <li><a
+                class="btn-details"
+                href="#"
+                data-filter=".Chimney"
+              >Chimney<span class="filter-count"></span></a></li>
+          </ul>
+          <div class="projects-grid pf_3_cols style-1 img-scale w-auto">
+            <div class="grid-sizer"></div>
+
+            {{#each products}}
+              <div class="project-item {{this.category}}">
+                <div class="projects-box">
+                  <div class="projects-thumbnail">
+                    <a href="portfolio-standar.html">
+                      <img src="/gallery-image/{{this._id}}.jpg" alt="" />
+                    </a>
+                    <div class="overlay">
+
+                      <i class="ot-flaticon-add"></i>
+                    </div>
+                  </div>
+                  <div class="portfolio-info">
+                    <div class="portfolio-info-inner">
+                      <h5><a
+                          class="title-link"
+                          href="portfolio-standar.html"
+                        >{{this.name}}</a></h5>
+                      <p class="portfolio-cates"><a
+                          href="#"
+                        >{{this.category}}</a></p>
+                    </div>
+                    <a class="overlay" href="portfolio-standar.html"></a>
+                  </div>
+                </div>
+              </div>
+            {{/each}}
+
+          </div>
+       
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
