@@ -46,7 +46,7 @@ db.connect((err) => {
 app.use(session({ secret: "key", cookie: { maxAge: 60000000 } }));
 app.use("/admin", adminRouter);
 app.use("/", userRouter);
-
+   
 app.use((req, res, next) => {
   res.status(404).render("user/404");
 });
