@@ -11,7 +11,7 @@ require("dotenv").config();
 router.get("/", async function (req, res, next) {
   productHelpers.getIndexProcut().then((product) => {
     res.render("user/index", { product });
-  });
+  });   
 });
 
 router.get("/login", (req, res) => {

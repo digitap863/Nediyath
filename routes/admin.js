@@ -14,7 +14,7 @@ const cridential = {
 };
 
 const verifylogin = (req, res, next) => {
-  if (req.session.admin) {
+  if (req.session.admin) {   
     next();
   } else {
     res.render("admin/admin-login", { login: true, admin: true });
@@ -43,7 +43,7 @@ router.get("/", verifylogin, async function (req, res, next) {
     res.render("admin/admin-home", { product, admin: true });
   });
 });
-
+ 
 router.get("/admin-logout", verifylogin, (req, res) => {
   req.session.admin = false;
   res.redirect("/admin");
