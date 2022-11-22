@@ -752,9 +752,8 @@
 
   <section class="about-1">
     <div class="grid-lines grid-lines-vertical">
-      <span class="g-line-vertical line-left color-line-default"></span>
-      <span class="g-line-vertical line-center color-line-default"></span>
-      <span class="g-line-vertical line-right color-line-default"></span>
+
+ 
     </div>
     <div class="container">
       <div class="row">
@@ -765,11 +764,20 @@
         </div>
         <div class="col-lg-6 col-md-12 align-self-center">
           <div class="about-content-1 ml-xl-70">
-            <div class="ot-heading is-dots">
-              <span>[ about shop ]</span>
-              <h2 class="main-heading">NEDIYATH</h2>
+          
+                     <div class="waviy">
+              <span style="--i:1">N</span>
+              <span style="--i:2">E</span>
+              <span style="--i:3">D</span>
+              <span style="--i:4">I</span>
+              <span style="--i:5">Y</span>
+              <span style="--i:6">A</span>
+              <span style="--i:7">T</span>
+              <span style="--i:8">H</span>
+        
             </div>
-            <p style="text-align: justify;">Nediyath Sanitary Wares is one of
+            </div>
+            <p class="Paregraph" style="text-align: justify;">Nediyath Sanitary Wares is one of
               the leading businesses in Ernakulam, Kerala. We are known for our
               wide range of products and services that include CPVC pipe
               dealers, sanitaryware dealers, sink dealers, and much more. We
@@ -1277,3 +1285,96 @@
   </section> --}}
 
 </div>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.waviy {
+  position: relative;
+  -webkit-box-reflect: below -20px linear-gradient(transparent, rgba(0,0,0,.2));
+    font-size: 43px;
+    margin-bottom: 52px;
+    text-align: left;
+}
+.header{
+    animation: waviy 1s forwards;
+    animation-delay: calc(.1s * var(--i));
+
+}
+.waviy span {
+  font-family: 'Alfa Slab One', cursive;
+  position: relative;
+  display: inline-block;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+
+  
+}
+@keyframes waviy {
+  0%,40%,100% {
+    transform: translateY(0)
+  }
+  20% {
+    transform: translateY(-20px)
+  }
+}
+.Paregraph{
+text-align: justify;
+
+transform: translateX(20px);
+
+}
+.animation{
+animation: textfly 0.5s forwards;
+
+}
+@keyframes textfly {
+  0% {
+   opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  transform: translateX(0);
+  }
+}
+
+@media (max-width:378px) {
+
+  .waviy {
+
+    font-size: 35px;
+  
+}
+}
+@media (max-width:500px) {
+
+  .waviy {
+
+    text-align: center;
+  
+}
+}
+</style>
+<script defer>
+  const items=document.querySelector(".Paregraph")
+  const heas=document.querySelectorAll(".waviy span")
+  const opserve=new IntersectionObserver((enteries)=>{
+    
+     const entry=enteries[0];
+
+     if(entry.isIntersecting){
+      items.classList.toggle('animation')
+      heas.forEach((hai)=>{
+       hai.classList.toggle("header")
+      })
+     }
+     
+  })
+   opserve.observe(items)
+
+</script>

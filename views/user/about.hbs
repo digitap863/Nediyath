@@ -180,7 +180,9 @@
             dealers, and much more. We have been in business and have
             established a strong reputation in the market. We always strive to
             provide our customers with the best possible products and services
-            at the most competitive prices.We have been serving the people of Ernakulam for over 25 years and have built up a reputation for quality products and excellent customer service. We also offer a variety of corner shelves and stainless-steel sinks. Our goal is to provide our customers with the best possible products and service. </p>
+            at the most competitive prices.We have been serving the people of Ernakulam for over 25 years and have built up a reputation for quality products and excellent customer service. We also offer a variety of corner shelves and stainless-steel sinks. Our goal is to provide our customers with the best possible products and service.
+            We are a one-stop shop for all your sanitary ware needs, and our products are of the highest quality. We also offer a wide range of services, including installation, maintenance, and repair. Our products are widely appreciated by the clients for their features like durability, easy installation, low maintenance and corrosion resistance. We offer these products at industry leading prices. We strive to provide the best possible service to our customers and we are always here to help you with any questions or concerns you may have. 
+ </p>
           <div class="ot-button">
             <a
               href="/Product"
@@ -258,8 +260,16 @@ animation: textfly 0.5s forwards;
   
 }
 }
+@media (max-width:500px) {
+
+  .waviy {
+
+    text-align: center;
+  
+}
+}
 </style>
-<script>
+<script defer>
   const items=document.querySelector(".Paregraph")
   const heas=document.querySelectorAll(".waviy span")
   const opserve=new IntersectionObserver((enteries)=>{
@@ -267,9 +277,9 @@ animation: textfly 0.5s forwards;
      const entry=enteries[0];
 
      if(entry.isIntersecting){
-      items.classList.add('animation')
+      items.classList.toggle('animation')
       heas.forEach((hai)=>{
-       hai.classList.add("header")
+       hai.classList.toggle("header")
       })
      }
      
