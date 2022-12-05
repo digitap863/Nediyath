@@ -10324,3 +10324,11 @@ ul.style-default li:last-child, ol.style-default li:last-child {
   margin-right: auto;
   margin-top: 30px;
 }
+.loading-animation{
+  position: absolute;
+  color: #0073B0;
+  font-size: xx-large;
+z-index: -1;
+
+  
+}
