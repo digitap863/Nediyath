@@ -35,37 +35,64 @@
         })(jQuery);
 
         function preloader(){
-            setTimeout(showpage,2000)
-            document.querySelector('.backToTop').style.visibility='hidden'
+            setTimeout(showpage,1000)
+            
         }
         function showpage(){
+             
             document.querySelector(".preLoader").classList.remove('preLoader')
             document.querySelector('.backToTop').style.visibility='visible'
+              document.querySelector('body').style.height="fit-content"
+           document.querySelector('body').style.overflow="visible"
+            
+
         }
-    </script>  
+    </script> 
     <style>
         .preLoader{
             position: absolute;
-            z-index: 99999;
+            z-index: 15;
             top: 0;
-            width: 100%;
-            height: 100%;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
             text-align: center;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
         }
         .preLoader .prelogo{
-            background-image: url("./images/loading.gif");
+            background-image: url("./images/loading.png");
             background-repeat: no-repeat;
             background-position: center center;
-            height: 100vh;
-            width: 100vw;
+            height: 3rem;
+            width: 3rem;
+            background-repeat: no-repeat;
+            background-size: cover;
+            z-index: 15;
+            animation: logospinner 1s ease-in-out  infinite alternate forwards;
+
+        }
+        @keyframes logospinner{
+            0%,100%{
+ transform: scale(1);
+            }
+            30%,60%{
+                transform: scale(1.5);
+            }
+            
         }
     </style>
 </head>
 
-<body class="royal_preloader preLoader" onload="preloader()">
-    <div class="prelogo">
+<body class="royal_preloader" onload="preloader()" style="height: 100vh;overflow: hidden;">
+    <div class="preLoader">
+        <div class="prelogo">
     </div>
+</div>
+
     <div id="page" class="site">
 
     {{#if admin}}
@@ -81,8 +108,8 @@
 {{>footer}}
 {{/if}}
 </div><!-- #page -->
-<a id="back-to-top" style="visibility: hidden;" href="#" class="show backToTop"><i class="ot-flaticon-left-arrow "></i></a>
-        <!-- jQuery -->
+<a id="back-to-top"  style="visibility:hidden;z-index: 1;" href="#" class="show backToTop"><i class="ot-flaticon-left-arrow "></i></a>
+    <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
     <script src="js/mousewheel.min.js"></script>
     <script src="js/lightgallery-all.min.js"></script>
@@ -92,54 +119,16 @@
     <script src="js/easypiechart.min.js"></script>
     <script src="js/jquery.countdown.min.js"></script>
     <script src="js/scripts.js"></script>
-    <script src="js/royal_preloader.min.js"></script>
+    {{!-- <script src="js/royal_preloader.min.js"></script> --}}
     <!-- REVOLUTION JS FILES -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-<script src="//s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js?r=182"></script>
+    <script src="//s3-us-west-2.amazonaws.com/s.cdpn.io/16327/MorphSVGPlugin.min.js?r=182"></script>
     <script  src="plugins/revolution/revolution/js/jquery.themepunch.tools.min.js"></script>
     <script  src="plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js"></script>
-
     <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->    
     <script  src="plugins/revolution/revolution/js/extensions/revolution-plugin.js"></script>
-
     <!-- REVOLUTION SLIDER SCRIPT FILES -->
     <script  src="js/rev-script-1.js"></script>
-    <script>
-        window.jQuery = window.$ = jQuery;  
-        (function($) { "use strict";
-            //Preloader
-            Royal_Preloader.config({
-                mode           :   'progress',
-                background     :   '#1a1a1a',
-            });
-        })(jQuery);
-
-        function preloader(){
-            setTimeout(showpage,3000)
-            document.querySelector('.backToTop').style.visibility='hidden'
-        }
-        function showpage(){
-            document.querySelector(".preLoader").classList.remove('preLoader')
-            document.querySelector('.backToTop').style.visibility='visible'
-        }
-    </script>  
-    <style>
-        .preLoader{
-            position: absolute;
-            z-index: 99999;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            text-align: center;
-
-        }
-        .preLoader .prelogo{
-            background-image: url("./images/loading.gif");
-            background-repeat: no-repeat;
-            background-position: center center;
-            height: 100vh;
-            width: 100vw;
-        }
-    </style>
+  
 </body>
 </html>

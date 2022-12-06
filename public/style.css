@@ -8355,7 +8355,7 @@ ul.style-default li:last-child, ol.style-default li:last-child {
     width: 90px;
     max-width: 90px;
     top: 50%;
-    z-index: 1;
+    z-index: 0;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);

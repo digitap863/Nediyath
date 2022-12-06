@@ -1409,7 +1409,7 @@ a:hover, a:active {
 .site-header {
   position: absolute;
   width: 100%;
-  z-index: 999;
+  z-index: 1 !important;
 }
 .site-header.header-static {
   position: static;
@@ -9876,7 +9876,7 @@ ul.style-default li:last-child, ol.style-default li:last-child {
   text-align: center;
   text-decoration: none;
   transition: opacity 0.2s ease-out 0s;
-  z-index: 1000;
+  z-index: 1;
   transition: all 0.5s ease-in-out;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
