@@ -42,10 +42,8 @@
              
             document.querySelector(".preLoader").classList.remove('preLoader')
             document.querySelector('.backToTop').style.visibility='visible'
-              document.querySelector('body').style.height="fit-content"
-           document.querySelector('body').style.overflow="visible"
-            
-
+            document.querySelector('body').style.height="fit-content"
+        
         }
     </script> 
     <style>
@@ -54,7 +52,7 @@
             z-index: 15;
             top: 0;
             left: 0;
-            width: 100vw;
+            width: 100%;
             height: 100vh;
             text-align: center;
             background-color: black;
@@ -87,7 +85,7 @@
     </style>
 </head>
 
-<body class="royal_preloader" onload="preloader()" style="height: 100vh;overflow: hidden;">
+<body class="royal_preloader" onload="preloader()" style="height: 100vh; width: 100%; overflow: hidden !important;">
     <div class="preLoader">
         <div class="prelogo">
     </div>
