@@ -25,14 +25,7 @@
     <!-- REVOLUTION NAVIGATION STYLE -->
     <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/navigation.css">
          <script>
-        window.jQuery = window.$ = jQuery;  
-        (function($) { "use strict";
-            //Preloader
-            Royal_Preloader.config({
-                mode           :   'progress',
-                background     :   '#1a1a1a',
-            });
-        })(jQuery);
+
 
         function preloader(){
             setTimeout(showpage,1000)
@@ -106,7 +99,7 @@
 {{>footer}}
 {{/if}}
 </div><!-- #page -->
-<a id="back-to-top"  style="visibility:hidden;z-index: 1;" href="#" class="show backToTop"><i class="ot-flaticon-left-arrow "></i></a>
+<a id="back-to-top"  style="visibility:hidden;z-index:1;" href="#" class="show backToTop"><i class="ot-flaticon-left-arrow "></i></a>
     <!-- jQuery -->
     <script src="js/jquery.min.js"></script>
     <script src="js/mousewheel.min.js"></script>
@@ -127,6 +120,16 @@
     <script  src="plugins/revolution/revolution/js/extensions/revolution-plugin.js"></script>
     <!-- REVOLUTION SLIDER SCRIPT FILES -->
     <script  src="js/rev-script-1.js"></script>
+    <script>
+                window.jQuery = window.$ = jQuery;  
+        (function($) { "use strict";
+            //Preloader
+            Royal_Preloader.config({
+                mode           :   'progress',
+                background     :   '#1a1a1a',
+            });
+        })(jQuery);
+    </script>
   
 </body>
 </html>
