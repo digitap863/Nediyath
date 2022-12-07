@@ -5564,7 +5564,7 @@ object {
 .project-item,
 .grid-sizer {
   float: left;
-  width: 33.3333333333%;
+  width: 50%;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
