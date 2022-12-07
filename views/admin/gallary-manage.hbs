@@ -64,15 +64,7 @@
           enctype="multipart/form-data" 
         >
           <div class="text-center"><h3>ADD GALLERY IMAGE</h3></div>
-          <fieldset>
-            <input
-              name="name"
-              class="form-control"
-              placeholder="name"
-              type="text"
-             
-            />
-          </fieldset>
+
           <fieldset style="height: 30%;" class="form-control" >
    <select  name="category" class="form-control" style="min-height: 40px;width: 100%;">
       <option value="FaucetsShowers">Faucets&Showers</option>
@@ -108,7 +100,6 @@
       <thead>
         <tr>
           <th scope="col">IMAGE</th>
-          <th scope="col">PRODUCT NAME</th>
           <th scope="col">CATEGORY</th> 
          
         </tr>
@@ -117,11 +108,10 @@
         {{#each product}}
           <tr>
             <td data-label="Account"><img
-                style="width: 50px; hieght: 50px;"
+                style="width: 200px; hieght: 150px;"
                 src="/gallery-image/{{this._id}}.jpg"
                 alt=""
               /></td>
-            <td data-label="name">{{this.name}}</td>
               <td data-label="category">{{this.category}}</td>
     
             <td data-label="image">
