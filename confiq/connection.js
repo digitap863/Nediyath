@@ -5,7 +5,6 @@ const state={
 module.exports.connect=function(done){
     const url='mongodb+srv://Tapclone_irs:Tapclone%40123%40@cluster0.prco7.mongodb.net/?retryWrites=true&w=majority'
     const dbname='nediyath'
-
     mongoClient.connect(url,(err,data)=>{
         if(err) return done(err)
         state.db=data.db(dbname)
